@@ -1,38 +1,130 @@
-def add(x, y):
-    return x + y
+# class tagCloud:
+#     def __init__(self):
+#         self._tags = {}
 
-def subtract(x, y):
-    return x - y
 
-def multiply(x, y):
-    return x * y
+#     def add(self, tag):
+#         self.tags{tag} = self.get(tag, 0) + 1 
 
-def divide(x, y):
-    if y == 0:
-        return "خطا: تقسیم بر صفر مجاز نیست!"
-    return x / y
 
-print("ماشین حساب ساده 🧮")
-print("1. جمع")
-print("2. تفریق")
-print("3. ضرب")
-print("4. تقسیم")
 
-choice = input("لطفاً شماره عملیات مورد نظر را وارد کنید (1/2/3/4): ")
+#     def __getitem__(self, tag):
+#         return self.tags.get(tag, 0)
+    
 
-try:
-    num1 = float(input("عدد اول را وارد کنید: "))
-    num2 = float(input("عدد دوم را وارد کنید: "))
+    
+#     def __setitem__(self, tag other):
+#         self.tags[tag] = other
 
-    if choice == '1':
-        print("نتیجه:", add(num1, num2))
-    elif choice == '2':
-        print("نتیجه:", subtract(num1, num2))
-    elif choice == '3':
-        print("نتیجه:", multiply(num1, num2))
-    elif choice == '4':
-        print("نتیجه:", divide(num1, num2))
-    else:
-        print("ورودی نامعتبر است!")
-except ValueError:
-    print("لطفاً فقط عدد وارد کنید.")
+
+#     def __len__(self):
+#         return len(self.tags)
+    
+
+#     def __iter__(self):
+#         return iter(self.tags.items())
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# import timeit
+
+
+# print(timeit.timeit("[x*2 for x in range(1000)]", number = 1000))
+# print(timeit.timeit("result=[]\nfor y in range(1000): result.append(y ** 2)", number = 1000))
+
+
+
+
+
+
+
+#class FutureFeature:
+#    pass
+
+
+
+
+
+
+
+
+
+
+
+# class InvalidOperationError(Exception):
+#     pass
+
+# raise InvalidOperationError("""Error InvalidOperationError
+#                             Error in class
+#                             !!!!!!!""")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# class Point:
+#     def __init__(self, x, y):
+#         self.x = x
+#         self.y = y
+
+
+#     def __add__(self, other):
+#         return Point(self.x + other.x, self.y + other.y)
+
+
+
+
+
+
+
+
+
+class Contact:
+    def __init__(self, name, phone):
+        self.name = name
+        self.phone = phone
+
+
+
+class AddressBook:
+    def __init__(self):
+        self.contacts = []
+
+    def __add__(self, contact):
+        self.contacts.append(contact)
+
+    def remove(self, name):
+        self.contacts = [c for c in self.contacts if c.name != name]
+
+    def search(self, name):
+        return [c for c in self.contacts if c.name == name]
